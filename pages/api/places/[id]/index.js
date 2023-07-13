@@ -1,4 +1,4 @@
-import { places } from '../../../../lib/db.js';
+import { places } from "../../../../lib/db.js";
 
 export default function handler(request, response) {
   const { id } = request.query;
@@ -7,10 +7,10 @@ export default function handler(request, response) {
     return;
   }
 
-  const place = places.find((place) => place.id === id);
+  const place = places.find((place) => place._id === id);
 
   if (!place) {
-    return response.status(404).json({ status: 'Not found' });
+    return response.status(404).json({ status: "Not found" });
   }
 
   response.status(200).json(place);
