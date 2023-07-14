@@ -13,10 +13,10 @@ export default async function handler(request, response) {
       await place.save();
       
   
-      response.status(201).json({ status: "Place created" });
+     return response.status(201).json({ status: "Place created" });
     } catch (error) {
       console.log(error);
-      response.status(400).json({ error: error.message });
+     return  response.status(400).json({ error: error.message });
     }
   }
   
