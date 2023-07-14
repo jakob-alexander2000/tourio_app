@@ -24,9 +24,9 @@ export default function CreatePlacePage() {
 
     if (response.ok) {
       await response.json();
-
+      router.push(`"/"`);
       places.mutate();
-      router.push("/");
+      
     } else {
       console.error(`Error: ${response.status}`);
     }
