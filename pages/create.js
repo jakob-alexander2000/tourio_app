@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Form from "../components/Form.js";
 import { StyledLink } from "../components/StyledLink.js";
 import useSWR from "swr";
-import { useRouter } from "next/router.js";
+import { useRouter } from "next/router";
 
 const StyledBackLink = styled(StyledLink)`
   justify-self: flex-start;
